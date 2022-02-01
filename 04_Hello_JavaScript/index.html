@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Introduction to JavaScript</title>
+</head>
+
+<body>
+    <p>The "greeting" div is below!</p>
+    <div id="greeting"></div>
+
+    <form name="hello" action="javascript:sayHello()">
+        <label for="firstname">First Name: </label>
+        <input type="text" name="firstname" id="firstname">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function sayHello() {
+            //let name = prompt("What is your name?");
+            //alert("Hello, " + name + "!");
+
+            let name = document.hello.firstname.value;
+            document.getElementById("greeting").innerHTML = "Hello <b>" + name + "</b>!";
+        }
+    </script>
+</body>
+
+</html>
