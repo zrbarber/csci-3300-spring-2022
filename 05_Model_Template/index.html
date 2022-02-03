@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Model Template</title>
+
+        <style>
+            body {
+                background-color:antiquewhite;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>My JavaScript Program</h1>
+        <hr>
+
+        <form name="myform" action="javascript:echoText()">
+            <label for="echofield">Echo this text!</label>
+            <input type="text" name="echo" id="echofield">
+            <input type="submit" value="Submit">
+        </form>
+
+        <div id="result">(The echo text will go here.)</div>
+
+        <script>
+            function echoText() {
+                let echovalue = document.myform.echo.value;
+                document.getElementById("results").innerHTML = echovalue;
+            }
+        </script>
+    </body>
+</html>
