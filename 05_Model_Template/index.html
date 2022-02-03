@@ -17,16 +17,17 @@
 
         <form name="myform" action="javascript:echoText()">
             <label for="echofield">Echo this text!</label>
-            <input type="text" name="echo" id="echofield">
-            <input type="submit" value="Submit">
+            <input type="text" id="echofield">
+            <input type="submit">
         </form>
 
         <div id="result">(The echo text will go here.)</div>
 
         <script>
             function echoText() {
-                let echovalue = document.myform.echo.value;
-                document.getElementById("results").innerHTML = echovalue;
+                //let echovalue = document.myform.echo.value;
+                let echovalue = document.getElementById("echofield").value;
+                document.getElementById("result").innerHTML = echovalue;
             }
         </script>
     </body>
