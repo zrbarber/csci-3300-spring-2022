@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Code by: Zachary Barber
+    Made in class: CSCI 3300-04
+    Created: February 1st, 2022 (02/01/22)-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Zachary Barber's Book App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: antiquewhite;
+            color: maroon;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            text-align: center;
+        }
+
+        main {
+            font-size: 18pt;
+            height: 100%;
+            width: 50%;
+            margin: auto;
+        }
+
+        footer {
+            font-size: 15pt;
+            clear: both;
+        }
+
+        hr {
+            height: 5px;
+            background-color: maroon;
+            border-radius: 20px;
+        }
+
+        #title {
+            background-color: maroon;
+            color: antiquewhite;
+            border-radius: 20px;
+            padding: 5px;
+            margin: 20px 75px 0 75px;
+        }
+
+        #book_title, #book_author, #book_subject {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            font-size: 16pt;
+            background-color: antiquewhite;
+            color: maroon;
+        }
+
+        #author, #subject {
+            background-color: maroon;
+            color: antiquewhite;
+            border-radius: 20px;
+            padding: 5px;
+            margin: 75px;
+        }
+
+        #button {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            background-color: maroon;
+            color: antiquewhite;
+            font-size: 15pt;
+            width: 30%;
+            border-radius: 20px;
+            padding: 5px;
+            margin: 30px;
+
+        }
+
+        #button:hover {
+            background-color: antiquewhite;
+            color: maroon;
+            border-color: maroon;
+            transition-duration: 0.2s;
+        }
+
+        #button:active {
+            transform: scale(0.9);
+            box-shadow: 3px 2px 22px 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Zachary Barber's Book App</h1>
+    </header>
+
+    <main>
+        <div id="title">Title</div>
+        <div id="author">Author</div>
+        <div id="subject">Subject</div>
+
+        <form name="book" action="javascript:showBook()">
+            <label for="book_title">Book Title: </label>
+            <input type="text" name="title" id="book_title">
+
+            <label for="book_author">Book Author: </label>
+            <input type="text" name="author" id="book_author">
+
+            <label for="book_subject">Book Subject: </label>
+            <input type="text" name="subject" id="book_subject">
+
+            <input type="submit" value="Submit" id="button">
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        &copy;2021 Zachary Barber
+    </footer>
+
+    <script>
+        function showBook() {
+            let title = document.book.title.value;
+            document.getElementById("title").innerHTML = title;
+
+            let author = document.book.author.value;
+            document.getElementById("author").innerHTML = author;
+
+            let subject = document.book.subject.value;
+            document.getElementById("subject").innerHTML = subject;
+        }
+
+    </script>
+</body>
+
+</html>
