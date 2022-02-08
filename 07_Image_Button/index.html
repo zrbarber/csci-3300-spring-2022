@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pancake Button!</title>
+
+    <style>
+        img {
+            width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pancake Button!</h1>
+    <hr>
+
+    <form name="myform" action="javascript:getPancakes()">
+        <input type="submit" value="Get some Pancakes!">
+    </form>
+    <form name="secondform" action="javascript:noPancakes()">
+        <input type="submit" value="Get rid of those Pancakes!">
+    </form>
+    <hr>
+
+    <div id="pancakes">Pancakes will go here!</div>
+
+
+    <script>
+        function getPancakes() {
+            document.getElementById("pancakes").innerHTML =
+                '<img src="images/pancakes.jpg" alt="A stack of pancakes.">';
+        }
+        function noPancakes() {
+            document.getElementById("pancakes").innerHTML = "They're gone!";
+        }
+    </script>
+</body>
+
+</html>
