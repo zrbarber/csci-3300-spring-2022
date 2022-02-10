@@ -3,21 +3,57 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Zachary Barber's Image Display Application</title>
+
+    <style>
+        body {
+            background-color: aquamarine;
+            text-align: center;
+        }
+
+        footer {
+            clear: both;
+        }
+
+        hr {
+            height: 5px;
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        img {
+            border: 3px solid black;
+            border-radius: 20px;
+            width: 50%;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-
+        <h1>Zachary Barber's Image Display Application</h1>
+        <hr>
     </header>
 
     <main>
+        <div id="myimage"></div>
 
+        <form name="myform" action="javascript:showImage()">
+            <input type="submit" value="Click me!" id="button">
+        </form>
     </main>
 
     <footer>
-        
+        <hr>
+        &copy;2021 Zachary Barber
     </footer>
+
+    <script>
+        function showImage() {
+            document.getElementById("myimage").innerHTML =
+                '<img src="images/red_panda.jpg" alt="A Red Panda licking its lips.">';
+        }
+    </script>
 </body>
 
 </html>
