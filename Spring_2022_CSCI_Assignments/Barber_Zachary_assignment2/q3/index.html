@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Zachary Barber's Shouting App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,13 +17,25 @@
     </header>
 
     <main>
-
+        <form name="startform" action = "javascript:startForm">
+            <label for="phrase">Enter the phrase you want to SHOUT:</label>
+            <input type="text" name="phrase" id="phrase">
+            <input type="submit" value="Start Application">
+        </form>
+        <div id="allcaps"></div>
     </main>
 
     <footer>
         <hr>
         &copy;2021 Zachary Barber
     </footer>
+
+    <script>
+        function startForm() {
+            let shout = document.getElementById("phrase").value;
+            document.getElementById("startform").innerHTML = shout;
+        }
+    </script>
 </body>
 
 </html>
