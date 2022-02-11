@@ -1,0 +1,74 @@
+body {
+    background-color: antiquewhite;
+    color: maroon;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+}
+
+main {
+    font-size: 18pt;
+    height: 100%;
+    width: 65%;
+    margin: auto;
+}
+
+footer {
+    font-size: 15pt;
+    clear: both;
+}
+
+hr {
+    height: 5px;
+    background-color: maroon;
+    border-radius: 20px;
+}
+
+#title {
+    background-color: maroon;
+    color: antiquewhite;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 20px 75px 0 75px;
+}
+
+#book_title,
+#book_author,
+#book_subject {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 16pt;
+    background-color: maroon;
+    color: antiquewhite;
+}
+
+#author,
+#subject {
+    background-color: maroon;
+    color: antiquewhite;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 75px;
+}
+
+#button {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background-color: maroon;
+    color: antiquewhite;
+    font-size: 15pt;
+    width: 30%;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 30px;
+
+}
+
+#button:hover {
+    background-color: antiquewhite;
+    color: maroon;
+    border-color: maroon;
+    transition-duration: 0.2s;
+}
+
+#button:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 20px 0;
+}
