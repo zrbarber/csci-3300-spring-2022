@@ -17,11 +17,12 @@
     </header>
 
     <main>
-        <form name="startform" action = "javascript:startForm">
-            <label for="phrase">Enter the phrase you want to SHOUT:</label>
-            <input type="text" name="phrase" id="phrase">
-            <input type="submit" value="Start Application">
+        <form name="myform" action="javascript:myForm()">
+            <label for="shout_phrase">Enter the phrase you want to SHOUT:</label>
+            <input type="text" name="phrase" id="shout_phrase">
+            <input type="submit" value="Start Application" id="button">
         </form>
+
         <div id="allcaps"></div>
     </main>
 
@@ -31,9 +32,11 @@
     </footer>
 
     <script>
-        function startForm() {
-            let shout = document.getElementById("phrase").value;
-            document.getElementById("startform").innerHTML = shout;
+        function myForm() {
+            let phrase = document.myform.phrase.value;
+            let shout = phrase.toUpperCase();
+
+            document.getElementById("allcaps").innerHTML = shout;
         }
     </script>
 </body>

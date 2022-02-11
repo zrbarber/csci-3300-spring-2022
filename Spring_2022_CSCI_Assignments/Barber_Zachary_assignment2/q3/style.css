@@ -4,3 +4,40 @@ body {
     color: black;
     text-align: center;
 }
+
+footer {
+    clear: both;
+}
+
+hr {
+    height: 5px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#button {
+    background-color: black;
+    color: coral;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+#button:hover {
+    background-color: coral;
+    color: black;
+    transition-duration: 0.2s;
+}
+
+#button:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 20px 0;
+}
+
+#allcaps {
+    background-color: black;
+    color: coral;
+    border-radius: 20px;
+    margin: 20px;
+    font-size: 3em;
+}
