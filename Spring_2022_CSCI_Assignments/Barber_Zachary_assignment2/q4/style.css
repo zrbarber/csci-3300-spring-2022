@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+    color: darkorange;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+footer {
+    clear: both;
+}
+
+hr {
+    height: 5px;
+    background-color: silver;
+    border-radius: 20px;
+}
+
+ul {
+    list-style: none;
+    display: inline;
+    margin-bottom: 200px;
+}
+
+#price {
+    font-size: 16pt;
+}
+
+#age {
+    font-family: 'Anton', sans-serif;
+    background-color: darkorange;
+    color: black;
+}
+
+#title {
+    text-decoration: underline;
+}
+
+#button {
+    background-color: darkorange;
+    color: black;
+    border-radius: 20px;
+    border: 2px solid darkorange;
+}
+
+#button:hover {
+    background-color: black;
+    color: darkorange;
+    transition-duration: 0.2s;
+}
+
+#button:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 20px 0;
+}

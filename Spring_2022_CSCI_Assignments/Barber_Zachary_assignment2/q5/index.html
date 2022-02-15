@@ -1,24 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Code by: Zachary Barber
+    Made in class: CSCI 3300-04
+    Created: February 10th, 2022 (02/10/22)-->
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Zachary Barber's Range Check App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-
+        <h1>Zachary Barber's Range Check App</h1>
+        <hr>
     </header>
 
     <main>
+        <div id="result_label">Result: </div>
+        <div id="result"></div>
 
+        <div id="range">With a range of 1 - 10</div>
+        <form name="myform" action="javascript:calculate()">
+            <label for="number">Enter the value: </label>
+            <input type="text" name="number" id="number">
+            <input type="submit" value="Check Range" id="button">
+        </form>
     </main>
 
     <footer>
-        
+        <hr>
+        &copy;2021 Zachary Barber
     </footer>
+
+    <script>
+        function calculate() {
+            let number = document.myform.number.value;
+            number = parseFloat(number);
+            let message = "";
+
+            if(isNaN(number)) {
+                    message = "This isn't a number... try again."
+                }
+                else if(number < 1) {
+                    message = "The value is lower than the minimum value of the range."
+                }
+                else if(number <= 10) {
+                    message = "The value is in the range of the minimum and the maximum."
+                }
+                else if(number > 10) {
+                    message = "The value is greater than the maximum value of the range."
+                }
+
+                document.getElementById("result").innerHTML = message;
+        }
+    </script>
 </body>
 
 </html>

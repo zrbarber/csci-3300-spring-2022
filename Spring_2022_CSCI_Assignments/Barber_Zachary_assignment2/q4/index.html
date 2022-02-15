@@ -1,24 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Code by: Zachary Barber
+    Made in class: CSCI 3300-04
+    Created: February 8th, 2022 (02/08/22)-->
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Zachary Barber's Movie Ticket App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-
+        <h1>Zachary Barber's Movie Ticket App</h1>
+        <hr>
     </header>
 
     <main>
+        <div id="title">Ticket Prices by Age:</div>
+        <ul>
+            <li>Under 12 - Free</li>
+            <li>12 to 16 - $10</li>
+            <li>17 or Older - $13</li>
+        </ul>
 
+        <hr>
+        
+        Ticket Price:
+        <div id="price"></div>
+
+        <form name="myform" action="javascript:findPrice()">
+            <label for="age">Enter the age:</label>
+            <input type="text" name="age" id="age">
+            <input type="submit" value="Get Pricing" id="button">
+        </form>
     </main>
 
     <footer>
-        
+        <hr>
+        &copy;2021 Zachary Barber
     </footer>
+
+    <script>
+        function findPrice() {
+            let age = document.myform.age.value;
+                age = parseFloat(age);
+                let price = "";
+
+                if(isNaN(age)) {
+                    price = "This isn't a number... try again."
+                }
+                else if(age < 0) {
+                    price = "You can't be negative years old!"
+                }
+                else if(age < 12) {
+                    price = "Free"
+                }
+                else if(age <= 16) {
+                    price = "$10"
+                }
+                else if(age >= 17) {
+                    price = "$13"
+                }
+
+                document.getElementById("price").innerHTML = price;
+        }
+    </script>
 </body>
 
 </html>
