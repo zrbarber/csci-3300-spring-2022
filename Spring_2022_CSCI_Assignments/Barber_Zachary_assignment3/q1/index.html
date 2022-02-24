@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zachary Barber's Larger of Three Numbers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Zachary Barber's Larger of Three Numbers</h1>
+        <hr>
+    </header>
+
+    <main>
+        <div id="results"></div>
+        <form name="myform" action="javascript:calculate()">
+            <label for="first">Enter the first number: </label>
+            <input type="text" name="first" id="first">
+
+            <label for="second">Enter the second number: </label>
+            <input type="text" name="second" id="second">
+
+            <label for="third">Enter the third number: </label>
+            <input type="text" name="third" id="third">
+
+            <input type="submit" value="Determine the larger number" id="button">
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        &copy;2021 Zachary Barber
+    </footer>
+
+    <script>
+        function calculate() {
+            let first = document.myform.first.value;
+            first = parseFloat(first);
+            let second = document.myform.second.value;
+            second = parseFloat(second);
+            let third = document.myform.third.value;
+            third = parseFloat(third);
+            let results = "";
+
+            if (first == second && first == third) {
+                results = "The first number (" + first + ") is the largest.";
+            } else if (first == second || first == third) {
+                results = "The first number (" + first + ") is the largest.";
+            } else if (second == third) {
+                results = "The second number (" + second + ") is the largest.";
+            }
+
+            if (first > second && first > third) {
+                results = "The first number (" + first + ") is largest.";
+            } else if (second > first && second > third) {
+                results = "The second number (" + second + ") is largest.";
+            } else if (third > first && third > second) {
+                results = "The third number (" + third + ") is largest.";
+            }
+
+            document.getElementById("results").innerHTML = results;
+        }
+    </script>
+</body>
+
+</html>
