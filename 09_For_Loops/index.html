@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>For Loop Shapes!</title>
+</head>
+
+<body>
+    <h1>For Loop Shapes!</h1>
+    <hr>
+
+    <form name="myform" action="javascript:letsgo()">
+        <label for="number">Enter a positive number: </label>
+        <input type="number" name="number" id="number">
+
+        <input type="submit">
+    </form>
+
+    <hr>
+
+    <pre id="results">(Results will go here.)</pre>
+
+    <script>
+        function letsgo() {
+            let number = document.myform.number.value;
+            number = parseInt(number);
+
+            const symbol = "~";
+
+            let message = "";
+
+            for (let j = 1; j <= number; j++) {
+                for (let i = number; i >= j; i--) {
+                    message += symbol;
+                }
+                message += "\n";
+            }
+            document.getElementById("results").innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>
