@@ -2,4 +2,45 @@ body {
   display: grid;
   place-content: center;
   text-align: center;
+  background-color: cadetblue;
+  font-family: "Poppins", sans-serif;
+}
+
+hr {
+  height: 5px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+#first,
+#second,
+#third {
+  border: 2px solid black;
+  border-radius: 20px;
+  text-align: center;
+  width: 8em;
+}
+
+#results {
+  margin-bottom: 5px;
+  font-size: 14pt;
+}
+
+#button {
+  background-color: black;
+  color: cadetblue;
+  border-radius: 20px;
+  border: 2px solid black;
+  margin-top: 5px;
+}
+
+#button:hover {
+  background-color: cadetblue;
+  color: black;
+  transition-duration: 0.2s;
+}
+
+#button:active {
+  transform: scale(0.95);
+  box-shadow: 3px 2px 20px 0;
 }
