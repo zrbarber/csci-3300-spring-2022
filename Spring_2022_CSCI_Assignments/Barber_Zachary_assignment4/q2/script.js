@@ -5,7 +5,7 @@ function letsGo() {
     let message = "<table> <tr> <th>Item</th> <th>Price</th> </tr>";
 
     document.getElementById("results").innerHTML =
-    `<tr> <th>Item</th> <th>Price($)</th> </tr>`
+        `<tr> <th>Item</th> <th>Price($)</th> </tr>`
 
     while (true) {
         name = prompt("Enter an item for the grocery list, or type 'done' if finished.");
