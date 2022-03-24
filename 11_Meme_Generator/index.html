@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zachary's Meme Maker</title>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Meme Maker</h1>
+        <hr>
+    </header>
+
+    <main>
+            <select name="image" onChange="javascript:setImage(this)">
+                <option value="images/bird.jpg">Bird</option>
+                <option value="images/cat.jpg">Cat</option>
+                <option value="images/monkey.jpg">Monkey</option>
+                <option value="images/cow.jpg">Cow</option>
+                <option value="images/crack.jpg">Crack</option>
+            </select>
+
+            <div>
+                Set text: <input type="text" name="memetext" onChange="javascript:setText(this)">
+            </div>
+
+        <hr>
+
+        <div id="mymeme"></div>
+    </main>
+</body>
+
+</html>
