@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+  background-color: lightgreen;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#button {
+  background-color: black;
+  color: lightgreen;
+  border-radius: 20px;
+  border: 2px solid black;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+#button:hover {
+  background-color: lightgreen;
+  color: black;
+  transition-duration: 0.2s;
+}
+
+#button:active {
+  transform: scale(0.95);
+  box-shadow: 3px 2px 20px 0;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Code by: Zachary Barber
+    Made in class: CSCI 3300-04
+    Created: March 30th, 2022 (03/30/22)-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Zachary Barber's Two Trains Tool</title>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Zachary Barber's Two Trains Tool</h1>
+        <hr>
+    </header>
+
+    <main>
+        <form name="myform" action="javascript:letsGo()">
+            <label for="a">Train A's Speed(mph):</label>
+            <input type="text" name="a" id="a" size="5">
+
+            <label for="b">Train B's Speed(mph):</label>
+            <input type="text" name="b" id="b" size="5">
+
+            <label for="distance">Distance(miles):</label>
+            <input type="text" name="distance" id="distance" size="5">
+
+            <input type="submit" value="Calculate!" id="button">
+        </form>
+
+        <div id="results"></div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; 2022 Zachary Barber
+    </footer>
+</body>
+
+</html>
