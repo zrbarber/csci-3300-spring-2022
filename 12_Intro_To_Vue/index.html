@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Introduction to Vue</title>
+    <meta charset="utf-8">
+
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <h1>This is an introduction to the Vue JavaScript Framework</h1>
+    <hr>
+
+    <div id="myapp">
+        Hello!
+
+        <p>{{ message }}</p>
+
+        <p>{{ second_message }}</p>
+    </div>
+
+    <div id="counter">
+        Counter: {{ count }}
+    </div>
+
+    <div id="handler">
+        <p>{{ message }}</p>
+        <button @click="reverseMessage">
+            Reverse Message
+        </button>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    message: "Hello, Vue!",
+                    second_message: "This is my second message.",
+                };
+            },
+        }).mount("#myapp");
+        Vue.createApp({
+            data() {
+                return {
+                    count: 0,
+                }
+            },
+            mounted() {
+                setInterval(() => { this.count++; }, 1000);
+            },
+        }).mount("#counter");
+
+        Vue.createApp({
+            data() {
+                return {
+                    message: "Hello Vue.js",
+                }
+            },
+            methods: {
+                reverseMessage() {
+                    this.message = this.message
+                        .split("")
+                        .reverse()
+                        .join("");
+                }
+            }
+        }).mount("#handler");
+    </script>
+</body>
+
+</html>
