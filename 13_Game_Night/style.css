@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+}
+
+#name {
+    margin-bottom: 5px;
+}
+
+#reset {
+    margin-top: 3px;
+}
+
+#scoreA {
+    margin-bottom: 20px;
+}
+
+#scoreB {
+    margin-bottom: 20px;
+}
+
+#scoreC {
+    margin-bottom: 20px;
+}
