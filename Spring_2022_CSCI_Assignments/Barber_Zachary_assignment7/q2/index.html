@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Code by: Zachary Barber
+    Made in class: CSCI 3300-04
+    Created: April 25th, 2022 (04/25/22)-->
+
+<head>
+    <title>Zachary Barber's Distance Conversion Application</title>
+    <meta charset="utf-8">
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Zachary Barber's Distance Conversion Application</h1>
+        <hr>
+    </header>
+
+    <main>
+        <div id="myapp">
+            <input v-model="number" @input="onInput()" id="input">
+            <select v-model="unit1">
+                <option value="centimeters">cm</option>
+                <option value="meters">m</option>
+                <option value="kilometers">km</option>
+                <option value="inches">in</option>
+                <option value="feet">ft</option>
+                <option value="miles">mi</option>
+            </select>
+            to
+            <select v-model="unit2">
+                <option value="centimeters">cm</option>
+                <option value="meters">m</option>
+                <option value="kilometers">km</option>
+                <option value="inches">in</option>
+                <option value="feet">ft</option>
+                <option value="miles">mi</option>
+            </select>
+
+            <p id="results">{{ result }}</p>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; 2022 Zachary Barber
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Code by: Zachary Barber
+    Made in class: CSCI 3300-04
+    Created: April 25th, 2022 (04/25/22)-->
+
+<head>
+    <title>Zachary Barber's Book App</title>
+    <meta charset="utf-8">
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Zachary Barber's Book App</h1>
+    </header>
+
+    <main>
+        <div id="myapp">
+            <p id="title">{{ title }}</p>
+
+            <p id="author">{{ author }}</p>
+
+            <p id="subject">{{ subject }}</p>
+
+            Book Title:
+            <input v-model="booktitle" class="book">
+
+            Book Author:
+            <input v-model="bookauthor" class="book">
+
+            Book Subject:
+            <input v-model="booksubject" class="book">
+
+            <div>
+                <button @click="letsGo()" id="button">Submit</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; 2022 Zachary Barber
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
